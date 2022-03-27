@@ -14,3 +14,4 @@ function Gif({ url, name, artist, album }) {
 }
 
 export default Gif;
+

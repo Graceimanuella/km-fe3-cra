@@ -14,3 +14,4 @@ export default function Home() {
 
   return <>{charList}</>;
 }
+
