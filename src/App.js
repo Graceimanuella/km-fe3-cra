@@ -1,13 +1,11 @@
 import "./styles.css";
-import Home from "./component/track/index";
+import search from "./component/search/index";
+import Home from "./component/search/index";
 
 export default function App() {
   return (
     <div className="App">
-      <h2>Track Info</h2>
-      <div id="album">
-        <Home />
-      </div>
+      <Home />
     </div>
   );
 }
