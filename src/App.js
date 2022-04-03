@@ -114,20 +114,31 @@ function App() {
                 image_url={item.album.images[0].url}
                 track_title={item.name}
                 artist_name={item.album.artists[0].name}
-                album_name={item.album.name}
-              />
-
-              
-              <button id="demo" onclick="myFunction()">Select</button>
-              <script>
-                function myFunction() {
-                  document.getElementById("demo").innerHTML = "Deselect"
-                }
-              </script>
+                album_name={item.album.name}>              
+                <button id="demo" onclick="myFunction()">Select</button>
+                <script>
+                  function myFunction() {
+                    document.getElementById("demo").innerHTML = "Deselect"
+                  }
+                </script>
+              </Track>              
             </>            
           );
         })}
       </div>
+
+      <div>
+        <h2>Create Playlist</h2>
+        <p>Please input song</p>
+        <form method="get">
+          <label>Title :</label>
+          <input type="text" minlength="10" placeholder="Please Input Song Title"></input>
+          <label>Description :</label>
+          <input type="text" placeholder="Please Input Song Description"></input>
+          <input type="submit" value="Submit"></input>
+        </form>
+      </div>
+      
     </div>
   );
 }
