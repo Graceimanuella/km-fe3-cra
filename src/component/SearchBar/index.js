@@ -2,8 +2,13 @@ import { useState } from 'react';
 import { useSelector } from "react-redux";
 import { searchTrack } from "../../utils/fetchApi";
 import Nav from '../Navbar';
+import 'antd/dist/antd.css';
+import './index.css';
+import { Input, Space } from 'antd';
 
 function Searchbar({ onSuccess, clearSearch }) {
+    const { Search } = Input;
+    const onSearch = value => console.log(value);
     const [inputSearch, setInputSearch] = useState();
     const { accessToken } = useSelector((state) => state.auth);
 
@@ -26,13 +31,15 @@ function Searchbar({ onSuccess, clearSearch }) {
         </div>
             <form className="form-search" onSubmit={(e) => handleSubmit(e)}>
                 <div className="form-group fg-search">
-                    <input
-                        type="text"
-                        name="query"
-                        placeholder="masukkan keyword"
-                        onChange={e => setInputSearch(e.target.value)}
-                        required
+                <Space direction="vertical">
+                    <Search
+                        placeholder="input search text"
+                        allowClear
+                        enterButton="Search"
+                        size="large"
+                        onSearch={onSearch}
                     />
+                    </Space>
                     <input type="submit" className="btn-green" value="Search" />
                 </div>
             </form>
