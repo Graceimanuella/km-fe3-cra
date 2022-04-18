@@ -27,3 +27,4 @@ function Playlist({url, title, artist, toggleSelect}) {
 }
 
 export default Playlist;
+

@@ -52,3 +52,4 @@ function Searchbar({ onSuccess, clearSearch }) {
 }
 
 export default Searchbar;
+
