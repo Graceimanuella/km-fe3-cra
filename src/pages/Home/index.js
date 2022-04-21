@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import config from '../../utils/config';
-import Playlist from '../../components/Playlist';
-import Searchbar from '../../components/Searchbar';
-import CreatePlaylist from '../../components/CreatePlaylist';
+import Playlist from '../../component/Playlist';
+import Searchbar from '../../component/SearchBar';
+import CreatePlaylist from '../../component/CreatePlaylist';
 import { getUserProfile } from '../../utils/fetchApi';
 import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../../redux/authSlice';

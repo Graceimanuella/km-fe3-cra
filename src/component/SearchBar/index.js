@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { searchTrack } from "../../utils/fetchApi";
 import Nav from '../Navbar';
 import 'antd/dist/antd.css';
-import './index.css';
+import '../../index.css';
 import { Input, Space } from 'antd';
 
 function Searchbar({ onSuccess, clearSearch }) {
